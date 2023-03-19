@@ -36,6 +36,28 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 
+
+    public function map(Router $router)
+    {
+        $this->mapApiRoutes();
+        $this->mapWebRoutes();
+
+            $router->group(['middleware' => ['web']], function ($router) {
+                $pages = Page::all();
+                foreach ($pages as $page) {
+                    $router->get($page->url,
+                        [
+                            'as' => $page->route_name, function () use ($page, $router) {
+                            return $this->app->call('App\Http\Controllers\PageController@show',
+                                [
+                                    'page' => $page,
+                                    'parameters' => $router->current()->parameters
+                                ]);
+                        }]);
+                }
+            });
+    }
+
     /**
      * Configure the rate limiters for the application.
      */
