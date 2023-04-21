@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Page;
+use App\Models\Page;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;

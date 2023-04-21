@@ -2,8 +2,8 @@
 
 namespace App\Admin\Controllers;
 
-use App\Page;
-use App\Slider;
+use App\Models\Page;
+use App\Models\Slider;
 use Encore\Admin\Facades\Admin;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;

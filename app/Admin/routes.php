@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\PageController;
 use Illuminate\Routing\Router;
 
 Admin::registerAuthRoutes();
