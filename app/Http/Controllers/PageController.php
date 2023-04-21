@@ -1,17 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\QuestBlock;
+use App\Models\QuestBlock;
 use Mail;
-use App\CenterNew;
-use App\Page;
-use App\PageBlock;
-use App\Slider;
-use App\SliderItem;
-use App\Photoset;
-use App\MailForm;
-use App\Map;
-use App\Question;
+//use App\Models\CenterNew;
+use App\Models\Page;
+use App\Models\PageBlock;
+use App\Models\Slider;
+use App\Models\SliderItem;
+use App\Models\Photoset;
+use App\Models\MailForm;
+use App\Models\Map;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -19,13 +19,13 @@ class PageController extends Controller
 {
     public $bread_crubs;
 
-    public function __construct(Page $page, PageBlock $pageBlock, CenterNew $centerNew, Map $map, QuestBlock $questBlock,
+    public function __construct(Page $page, PageBlock $pageBlock, Map $map, QuestBlock $questBlock,
                                 Slider $slider, SliderItem $sliderItem, Photoset $photoset, MailForm $mailForm)
     {
         $this->page = $page;
         $this->pageBlock = $pageBlock;
         $this->questBlock = $questBlock;
-        $this->centerNew = $centerNew;
+//        $this->centerNew = $centerNew;
         $this->slider = $slider;
         $this->sliderItem = $sliderItem;
         $this->photoset = $photoset;
@@ -59,12 +59,17 @@ class PageController extends Controller
         $data['pages'] = $this->page->getMenu();
         $data['directs'] = $this->page->where('number_direct','>', '0')->orderBy('number_direct')->get();
         $data['page_blocks'] = $this->pageBlock->where('page_id', $page->id)->orderBy('orders')->get();
-        $data['center_news'] = $this->centerNew->orderBy('date', 'desc')->inRandomOrder()->limit($limit_news)->get();
+        if ($page->id == 1) {
+            $data['directs'] = $this->pageBlock
+                ->orWhere('page_id', 6)
+                ->orderBy('orders')->get();
+        }
+//        $data['center_news'] = $this->centerNew->orderBy('date', 'desc')->inRandomOrder()->limit($limit_news)->get();
         $data['banners'] = $banners;
         $data['bread_crumbs'] = '<a href="/">Главная</a> /'.$this->bread_crubs;
 
 //        dd($page->getMenu());
-//dd($page->id,$data);
+//dd($template, $page->id,$data);
         return view($template, $data);
     }
 

@@ -7,37 +7,31 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ $data->title }}</title>
     <meta name="description" content="{{ $data->description }}" />
     <meta name="keywords" content="{{ $data->keywords }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
     @include('layouts.styles')
 </head>
-<body>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<div id="overlayer"></div>
+<div class="loader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div class="site-wrap"  id="home-section">
     @include('layouts.header')
 
     @yield('content')
 
-
-{{--<section id="footer-links">--}}
-    {{--<div class="container">--}}
-        {{--<ul>--}}
-            {{--<li><a href="http://old.ctrtlt.ru">Старая версия сайта</a></li>--}}
-            {{--<li><a href="">Профстандарт в образовани</a></li>--}}
-            {{--<li><a href="">Кадры для региона</a></li>--}}
-            {{--<li><a href="">Календарь мероприятий</a></li>--}}
-            {{--<li><a href="">Автоматизированная информационная система</a></li>--}}
-        {{--</ul>--}}
-    {{--</div>--}}
-{{--</section>--}}
-
 @include('layouts.footer')
 
-<div class="go-top">
-    <a href="#top-header"></a>
 </div>
 
 @include('layouts.scripts')

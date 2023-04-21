@@ -1,66 +1,59 @@
-<section class="w3l-footer-29-main">
-    <div class="footer-29">
-        <div class="container">
-            <div class="d-grid grid-col-4 footer-top-29">
-                <div class="footer-list-29 footer-1">
-                    <h6 class="footer-title-29">Контакты</h6>
-                    <ul>
-                        <li><p><span class="fa fa-map-marker"></span> {{ config('address') }}</p></li>
-                        <li><a href="tel:+7-800-999-800"><span class="fa fa-phone"></span> {{ config('phones') }}</a></li>
-                        <li><a href="mailto:{{ config('email') }}" class="mail"><span class="fa fa-envelope-open-o"></span> {{ config('email') }}</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list-29 footer-2">
-                    <ul>
-                        <h6 class="footer-title-29">Быстрые ссылки</h6>
-                        <li><a href="customer">Личный кабинет</a></li>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="footer-heading mb-4">О нас</h2>
+                        <p>Современная логистика для развития бизнеса.</p>
+                    </div>
+                    <div class="col-md-4 ml-auto">
+                        <h2 class="footer-heading mb-4">Сссылки</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
 
-                    </ul>
-                </div>
-                <div class="footer-list-29 footer-4">
-                    <ul>
-                        <h6 class="footer-title-29">Меню</h6>
-                        @if(isset($pages))
-                        @foreach($pages as $page)
-                            <li><a href="/{{ $page->url }}"> {{ $page->name }}</a></li>
-                        @endforeach
-                        @endif
-                    </ul>
                 </div>
             </div>
-            <div class="d-grid grid-col-2 bottom-copies">
-                <p class="copy-footer-29">© {{ date('Y', time())  }} {{ config('company_name') }}. Все права защищены.</p>
-                <ul class="list-btm-29">
-                    <li><a href="/personalnye-dannye">Персональные данные</a></li>
-                    <li><a href="/polzovatelskoe-soglashenie">Пользовательское соглашение</a></li>
+            <div class="col-md-4 ml-auto">
 
-                </ul>
+                <div class="mb-5">
+                    <div class="desktop-group291">
+                        <img src="images/layer45388-oqxg.svg" alt="Layer45388" class="desktop-layer4">
+                        <img src="images/layer45388-x0gf.svg" alt="Layer45388" class="desktop-layer41">
+                    </div>
+                    <div class="desktop-logo1">
+                <span class="footer-heading">
+                  {{ config('company_name') }}
+                </span>
+                    </div>
+                </div>
+
+
+                <h2 class="footer-heading mb-4">Мы в соцсетях</h2>
+                <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                </form>
             </div>
         </div>
+        <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+                <div class="border-top pt-5">
+                    <p class="copyright"><small>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Все права зарегистрированы | Дизайн <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </small></p>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <!-- move top -->
-    <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-angle-up"></span>
-    </button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+</footer>
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-    <!-- /move top -->
-</section>

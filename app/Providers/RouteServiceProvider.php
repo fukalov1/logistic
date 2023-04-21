@@ -2,69 +2,89 @@
 
 namespace App\Providers;
 
-use Illuminate\Cache\RateLimiting\Limit;
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Routing\Router;
+use App\Models\Page;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
 {
     /**
-     * The path to the "home" route for your application.
+     * This namespace is applied to your controller routes.
      *
-     * Typically, users are redirected here after authentication.
+     * In addition, it is set as the URL generator's root namespace.
      *
      * @var string
      */
-    public const HOME = '/home';
+    protected $namespace = 'App\Http\Controllers';
 
     /**
-     * Define your route model bindings, pattern filters, and other route configuration.
+     * Define your route model bindings, pattern filters, etc.
+     *
+     * @return void
      */
-    public function boot(): void
+    public function boot()
     {
-        $this->configureRateLimiting();
+        //
 
-        $this->routes(function () {
-            Route::middleware('api')
-                ->prefix('api')
-                ->group(base_path('routes/api.php'));
-
-            Route::middleware('web')
-                ->group(base_path('routes/web.php'));
-        });
+        parent::boot();
     }
 
-
+    /**
+     * Define the routes for the application.
+     *
+     * @return void
+     */
     public function map(Router $router)
     {
         $this->mapApiRoutes();
+
         $this->mapWebRoutes();
 
-            $router->group(['middleware' => ['web']], function ($router) {
-                $pages = Page::all();
-                foreach ($pages as $page) {
-                    $router->get($page->url,
-                        [
-                            'as' => $page->route_name, function () use ($page, $router) {
-                            return $this->app->call('App\Http\Controllers\PageController@show',
-                                [
-                                    'page' => $page,
-                                    'parameters' => $router->current()->parameters
-                                ]);
-                        }]);
-                }
-            });
+        $router->group(['middleware' => ['web']], function ($router) {
+            $pages = Page::all();
+            foreach ($pages as $page) {
+                $router->get($page->url,
+                    [
+                        'as' => $page->route_name, function () use ($page, $router) {
+                        return $this->app->call('App\Http\Controllers\PageController@show',
+                            [
+                                'page' => $page,
+                                'parameters' => $router->current()->parameters
+                            ]);
+                    }]);
+            }
+        });
+
+
     }
 
     /**
-     * Configure the rate limiters for the application.
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
      */
-    protected function configureRateLimiting(): void
+    protected function mapWebRoutes()
     {
-        RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
-        });
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
+    }
+
+    /**
+     * Define the "api" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapApiRoutes()
+    {
+        Route::prefix('api')
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
 }
