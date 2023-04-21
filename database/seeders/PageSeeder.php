@@ -79,7 +79,6 @@ class PageSeeder extends Seeder
                 ]
         ];
 
-        Page::truncate();
         foreach ($data as $item) {
             Page::updateOrCreate($item);
         }
