@@ -21,9 +21,9 @@ class TextTranslate extends Text
         $value = $this->form->model()->name;
         $value = mb_strtolower($value);
 
-        $parent = \App\Page::find($this->form->model()->parent_id);
+        $parent = \App\Models\Page::find($this->form->model()->parent_id);
 
-        if ($value=='главная')
+        if ($value=='главная' or $value=='Главная')
             $value = '';
         else {
             $value = $this->translit($value);
