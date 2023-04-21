@@ -30,8 +30,8 @@
                         <div class="middle-section grid-column text-center">
                             <div class="three-grids-columns">
                                 <span class="fa fa-laptop"></span>
-                                    <h3>{{ $page_block->header }}</h3>
-                                    {!! $page_block->text !!}
+                                <h3>{{ $page_block->header }}</h3>
+                                {!! $page_block->text !!}
                             </div>
                         </div>
                     </div>
@@ -59,33 +59,30 @@
                 </div>
             </section>
         @elseif($page_block->type=='7')
-            <section class="w3l-main-slider" id="home">
-            @foreach($page_block->sliders as $slider)
-                        <div class="companies20-content">
-                            <div class="owl-one owl-carousel owl-theme">
-                                @foreach($slider->items as $slider_item)
-                                    <div class="item">
-                                        <li>
-                                            <div class="slider-info banner-view bg bg2" data-selector=".bg.bg2"
-                                                 style="background: url('/uploads/{{$slider_item->image}}')">
-                                                <div class="banner-info">
-                                                    <div class="container">
-                                                        <div class="banner-info-bg mx-auto text-center">
-                                                            <h5>{{ $slider_item->title }}</h5>
-                                                            <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4"
-                                                               href="{{ $slider_item->url }}">подробнее</a>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+            <div class="owl-carousel slide-one-item">
+                @foreach($page_block->sliders as $slider)
+                            @foreach($slider->items as $slider_item)
+                                <div class="site-section-cover overlay img-bg-section"
+                                     style="background-image: url('/uploads/{{$slider_item->image}}'); " >
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center text-center">
+                                    <div class="col-md-12 col-lg-8">
+                                        <h1 data-aos="fade-up" data-aos-delay="">{{ $slider_item->title }}</h1>
+                                        <p class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                                            {{ $slider_item->text }}
+                                        </p>
+                                        <p data-aos="fade-up" data-aos-delay="200">
+                                            <a href="{{ $slider_item->url }}"
+                                               class="btn btn-outline-white border-w-2 btn-md">Узнать подробнее</a>
+                                        </p>
                                     </div>
-                                @endforeach
+                                </div>
                             </div>
+
                         </div>
-            @endforeach
-            </section>
+                            @endforeach
+                @endforeach
+            </div>
         @endif
     @endforeach
 
