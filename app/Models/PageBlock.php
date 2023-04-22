@@ -37,4 +37,8 @@ class PageBlock extends Model
         return $this->hasMany(MailForm::class);
     }
 
+    public function mini_page_blocks()
+    {
+        return $this->hasMany(MiniPageBlock::class);
+    }
 }

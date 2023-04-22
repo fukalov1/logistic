@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use App\MailFormField;
 use Illuminate\Database\Eloquent\Model;
 
 class MailForm extends Model

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\AdminConfig;
 use App\Models\QuestBlock;
 use Mail;
 //use App\Models\CenterNew;
@@ -59,13 +60,16 @@ class PageController extends Controller
         $data['pages'] = $this->page->getMenu();
         $data['directs'] = $this->page->where('number_direct','>', '0')->orderBy('number_direct')->get();
         $data['page_blocks'] = $this->pageBlock->where('page_id', $page->id)->orderBy('orders')->get();
-        if ($page->id == 1) {
-            $data['directs'] = $this->pageBlock
-                ->orWhere('page_id', 6)
-                ->orderBy('orders')->get();
-        }
 //        $data['center_news'] = $this->centerNew->orderBy('date', 'desc')->inRandomOrder()->limit($limit_news)->get();
         $data['banners'] = $banners;
+        $config = [];
+        foreach (AdminConfig::all() as $item) {
+            $config[$item->name] = [
+                'value' => $item->value,
+                'description' => $item->description
+            ];
+        }
+        $data['config'] = $config;
         $data['bread_crumbs'] = '<a href="/">Главная</a> /'.$this->bread_crubs;
 
 //        dd($page->getMenu());

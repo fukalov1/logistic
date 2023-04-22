@@ -128,6 +128,15 @@ class PageBlockController extends Controller
             elseif ($this->type==12) {
                 $str = '<a href="/admin/quest_blocks?set='.$this->id.'">вопросы-ответы</a>';
             }
+            elseif ($this->type==13) {
+                $str = '<a href="/admin/sub_pages?set='.$this->id.'">Виды услуг (направления)</a>';
+            }
+            elseif ($this->type==14) {
+                $str = '<a href="/admin/config">Компания в цифрах</a>';
+            }
+            elseif ($this->type==15) {
+                $str = 'мини-блоки';
+            }
             return $str;
         });
         $grid->content('Фото')->display(function ($image) {
@@ -187,7 +196,10 @@ class PageBlockController extends Controller
                 '9'=> 'Фотогалерея',
                 '10'=> 'Почтовая форма',
                 '11'=> 'Карта',
-                '12'=> 'Вопросы-ответы'
+                '12'=> 'Вопросы-ответы',
+                '13'=> 'Виды услуг',
+                '14'=> 'Компания в цифрах',
+                '15'=> 'Мини-блоки',
                 ];
             return $list;
         })->default(1);
