@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/send_form/{id}', [PageController::class, 'sendFormData']);
+Route::post('/send_quest/{id}', 'PageController@sendQuestData');
+Route::get('/company-news/{id?}', 'NewsController@showAll');
+Route::get('/company-new/{id?}', 'NewsController@show');

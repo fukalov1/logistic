@@ -20,8 +20,8 @@
     <div class="container">
         <div class="row align-items-center position-relative">
             <div class="site-logo">
-                <img src="images/layer45278-a7dr.svg" alt="Layer45278" class="desktop-layer42"/>
-                <img src="images/layer45278-xkal.svg" alt="Layer45278" class="desktop-layer43"/>
+                <img src="{{ asset('images/layer45278-a7dr.svg') }}" alt="Layer45278" class="desktop-layer42"/>
+                <img src="{{ asset('images/layer45278-xkal.svg') }}" alt="Layer45278" class="desktop-layer43"/>
                 <!--              <div class="site-logo-text">-->
                 <a href="index.html" class="text-black"><div class="text-primary site-logo-text">{{ config('company_name') }}</div></a>
                 <!--              </div>-->

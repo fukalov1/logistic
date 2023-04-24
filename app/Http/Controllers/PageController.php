@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\AdminConfig;
 use App\Models\QuestBlock;
+//use Illuminate\Support\Facades\Mail;
 use Mail;
 //use App\Models\CenterNew;
 use App\Models\Page;
@@ -90,8 +91,6 @@ class PageController extends Controller
     public function sendFormData($id)
     {
         if ($id) {
-
-
             try {
                 $mailform = MailForm::find($id);
                 $direction = request('direction');
@@ -118,7 +117,8 @@ class PageController extends Controller
                 $data = ['result' => 'Спасибо за Ваше обращение. <br/><br/>Сообщение успешно отправлено администратору.<br/><br/> В ближайшее время Вы получите ответ.'];
             }
             catch (\Exception $error) {
-                Log::channel('sitelog')->info('Error send mail from ' . request('email') . ' name: ' . request('fio') . ' ' . request('direction'));
+                Log::channel('sitelog')->info('Error send mail from ' .
+                    request('email') . ' name: ' . request('fio') . ' ' . $error->getMessage());
             }
         }
         else {

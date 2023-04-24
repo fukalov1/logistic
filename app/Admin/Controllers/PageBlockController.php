@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 use App\Models\Page;
 use App\Models\PageBlock;
+use App\Models\CompanyNew;
 use Encore\Admin\Facades\Admin;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -113,6 +114,9 @@ class PageBlockController extends Controller
         });
         $grid->question('Функционал')->display(function () {
             $str = '';
+            if ($this->type==5) {
+                $str = '<a href="/admin/company-news">новости</a>';
+            }
             if ($this->type==7) {
                 $str = '<a href="/admin/sliders?set='.$this->id.'">слайдеры</a>';
             }
@@ -187,16 +191,16 @@ class PageBlockController extends Controller
             $list = [
                 '1' => 'Стандарт',
                 '2' => 'С фото',
-                '3'=> 'Промо-блок',
-                '4'=> 'Список документов',
-                '5'=> 'Список ссылок',
-                '6'=> 'Список ссылок на PDF',
+//                '3'=> 'Промо-блок',
+//                '4'=> 'Список документов (ссылок)',
+                '5'=> 'Новости',
+//                '6'=> 'Список ссылок на PDF',
                 '7'=> 'Слайдеры',
-                '8'=> 'Блок во всю ширину',
+//                '8'=> 'Блок во всю ширину',
                 '9'=> 'Фотогалерея',
                 '10'=> 'Почтовая форма',
                 '11'=> 'Карта',
-                '12'=> 'Вопросы-ответы',
+//                '12'=> 'Вопросы-ответы',
                 '13'=> 'Виды услуг',
                 '14'=> 'Компания в цифрах',
                 '15'=> 'Мини-блоки',

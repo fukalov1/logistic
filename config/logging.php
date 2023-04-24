@@ -51,6 +51,12 @@ return [
     */
 
     'channels' => [
+        'sitelog' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/site.log'),
+            'level' => 'info',
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],

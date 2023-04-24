@@ -16,7 +16,7 @@ Route::group([
     $router->resource('sub_pages', SubPageController::class)->middleware('set_page');
     $router->resource('page_blocks', PageBlockController::class)->middleware('set_page');
     $router->get('remove_photo', 'PageBlockController@removePhoto');
-    $router->resource('news', CenterNewController::class)->middleware('set_page');
+    $router->resource('company-news', CompanyNewController::class)->middleware('set_page');
     $router->resource('events', CenterEventController::class);
     $router->resource('sliders', SliderController::class)->middleware('set_page_block');
     $router->resource('slider_items', SliderItemController::class)->middleware('set_slider');

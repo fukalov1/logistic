@@ -2,8 +2,8 @@
 
 namespace App\Admin\Controllers;
 
-use App\Map;
-use App\MapPoint;
+use App\Models\Map;
+use App\Models\MapPoint;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;

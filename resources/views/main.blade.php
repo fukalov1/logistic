@@ -158,7 +158,7 @@
             </div>
             @elseif($page_block->type=='10')
             @foreach($page_block->mail_forms as $item)
-                <div class="site-section bg-light" id="block{{ $page_block->id }}">
+                <div class="site-section bg-light mail-form" id="block{{ $page_block->id }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
@@ -181,7 +181,7 @@
                                     </div>
                                 @endforeach
                                 <div class="col-md-{{ round(12/($item->fields->count()+1)) }} ml-auto">
-                                <button type="button" class="btn btn-block btn-primary text-white py-3 px-5"
+                                <button type="button" class="btn btn-block btn-primary text-white py-3 px-5 submit-button"
                                         rel="{{ $item->id }}">
                                     Отправить
                                 </button>

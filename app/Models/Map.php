@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use App\MapPoint;
 use Illuminate\Database\Eloquent\Model;
 
 class Map extends Model

@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	"use strict";
 
 	$(".loader").delay(1000).fadeOut("slow");
-  $("#overlayer").delay(1000).fadeOut("slow");	
+  $("#overlayer").delay(1000).fadeOut("slow");
 
 	var siteMenuClone = function() {
 
@@ -20,11 +20,11 @@ jQuery(document).ready(function($) {
 
 
 		setTimeout(function() {
-			
+
 			var counter = 0;
       $('.site-mobile-menu .has-children').each(function(){
         var $this = $(this);
-        
+
         $this.prepend('<span class="arrow-collapse collapsed">');
 
         $this.find('.arrow-collapse').attr({
@@ -50,11 +50,105 @@ jQuery(document).ready(function($) {
       } else {
         $this.addClass('active');
       }
-      e.preventDefault();  
-      
+      e.preventDefault();
+
     });
 
-		$(window).resize(function() {
+        $('.submit-button').click(function() {
+
+            let send = true;
+            let id = $(this).attr('rel');
+            let empty_field = '';
+            $('.field').each(function () {
+                if ($(this).val()==='' || $(this).val()===' ') {
+                    empty_field = $(this).attr('rel');
+                    send  = false;
+                    return false;
+                }
+            });
+            if (($('#message'+id).val()==='' || $('#message'+id).val()===' ') && send===true) {
+                empty_field = 'message';
+                send = false;
+            }
+
+
+            if (send) {
+                $.ajax({
+                    url: "/send_form/" + id,
+                    dataType: "json",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: "Post",
+                    data: $('#sendform'+id).serialize(),
+                    success: function (data) {
+                        $('.form-area' + id).html('<h2>'+data.result+'</h2>');
+                    },
+                    error: function (data) {
+                        $('.form-area' + id).html('<h2>РЎРѕРѕР±С‰РµРЅРёРµ РЅРµ РѕС‚РїСЂР°РІР»РµРЅРѕ</h2>');
+                    },
+                    complete: function (data) {
+                    }
+                });
+            }
+            else {
+                console.log('Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»Рµ ', empty_field, id);
+                $('#'+empty_field+id).toggleClass('empty-field');
+            }
+            console.log('send data form ', $(this).attr('rel'));
+            return false;
+        });
+
+        $('.submit-quest').click(function() {
+
+            let send = true;
+            let id = $(this).attr('rel');
+            let empty_field = '';
+            $('.field').each(function () {
+                if ($(this).val()==='' || $(this).val()===' ') {
+                    empty_field = $(this).attr('rel');
+                    send  = false;
+                    return false;
+                }
+            });
+            if (($('#message'+id).val()==='' || $('#message'+id).val()===' ') && send===true) {
+                empty_field = 'message';
+                send = false;
+            }
+
+
+            if (send) {
+                $.ajax({
+                    url: "/send_quest/" + id,
+                    dataType: "json",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: "Post",
+                    data: $('#sendquest'+id).serialize(),
+                    beforeSend: function() {
+                        $('.form-area' + id).html('<h2>Р’РѕРїСЂРѕСЃ РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ</h2>');
+                    },
+                    success: function (data) {
+                        $('.form-area' + id).html('<h2>'+data.result+'</h2>');
+                    },
+                    error: function (data) {
+                        $('.form-area' + id).html('<h2>РЎРѕРѕР±С‰РµРЅРёРµ РЅРµ РѕС‚РїСЂР°РІР»РµРЅРѕ</h2>');
+                    },
+                    complete: function (data) {
+                    }
+                });
+            }
+            else {
+                console.log('Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»Рµ ', empty_field, id);
+                $('#'+empty_field+id).toggleClass('empty-field');
+            }
+            console.log('send data form ', $(this).attr('rel'));
+            return false;
+        });
+
+
+        $(window).resize(function() {
 			var $this = $(this),
 				w = $this.width();
 
@@ -76,7 +170,7 @@ jQuery(document).ready(function($) {
 				$('body').addClass('offcanvas-menu');
 				$this.addClass('active');
 			}
-		}) 
+		})
 
 		// click outisde offcanvas
 		$(document).mouseup(function(e) {
@@ -87,7 +181,7 @@ jQuery(document).ready(function($) {
 				}
 	    }
 		});
-	}; 
+	};
 	siteMenuClone();
 
 
@@ -124,7 +218,7 @@ jQuery(document).ready(function($) {
 	// siteSliderRange();
 
 
-	
+
 
 	var siteCarousel = function () {
 		if ( $('.nonloop-block-13').length > 0 ) {
@@ -176,7 +270,7 @@ jQuery(document).ready(function($) {
 	};
 	siteCarousel();
 
-	
+
 
 	var siteCountDown = function() {
 
@@ -188,7 +282,7 @@ jQuery(document).ready(function($) {
 		    + '<span class="countdown-block"><span class="label">%M</span> min </span>'
 		    + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
 		});
-				
+
 	};
 	// siteCountDown();
 
@@ -228,7 +322,7 @@ jQuery(document).ready(function($) {
 
   var siteScroll = function() {
 
-  	
+
 
   	$(window).scroll(function() {
 
@@ -240,14 +334,14 @@ jQuery(document).ready(function($) {
   			$('.js-sticky-header').removeClass('shrink');
   		}
 
-  	}) 
+  	})
 
   };
   siteScroll();
 
 
   var counter = function() {
-		
+
 		$('#about-section').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
@@ -263,7 +357,7 @@ jQuery(document).ready(function($) {
 					  }, 7000
 					);
 				});
-				
+
 			}
 
 		} , { offset: '95%' } );

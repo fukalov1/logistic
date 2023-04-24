@@ -23,8 +23,8 @@
 
                 <div class="mb-5">
                     <div class="desktop-group291">
-                        <img src="images/layer45388-oqxg.svg" alt="Layer45388" class="desktop-layer4">
-                        <img src="images/layer45388-x0gf.svg" alt="Layer45388" class="desktop-layer41">
+                        <img src="{{ asset('images/layer45388-oqxg.svg') }}" alt="Layer45388" class="desktop-layer4">
+                        <img src="{{ asset('images/layer45388-x0gf.svg') }}" alt="Layer45388" class="desktop-layer41">
                     </div>
                     <div class="desktop-logo1">
                 <span class="footer-heading">

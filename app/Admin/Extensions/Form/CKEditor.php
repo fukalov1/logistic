@@ -16,7 +16,7 @@ class CKEditor extends Field
     public function render()
     {
         $this->script = "$('textarea.{$this->getElementClassString()}').ckeditor();";
-        $this->script = "CKEDITOR.config.language = 'ru'";
+//        $this->script = "CKEDITOR.config.language = 'ru'";
 
         return parent::render();
     }

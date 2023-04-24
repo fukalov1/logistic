@@ -24,22 +24,6 @@
     @yield('content')
 
 
-<section id="footer-links">
-    <div class="container">
-        <ul>
-            @foreach($pages as $page)
-                <li>
-                    @if($page->redirect=='')
-                        <a href='/{{ $page->url }}'>{!! $page->name  !!} </a>
-                    @else
-                        <a href='/{{ $page->redirect }}'>{!! $page->name  !!} </a>
-                    @endif
-                </li>
-            @endforeach
-        </ul>
-    </div>
-</section>
-
 @include('layouts.footer')
 
 <div class="go-top">

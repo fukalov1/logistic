@@ -17,7 +17,7 @@
  *
  */
 
-Admin::js('/js/custom.js');
+//Admin::js('/js/custom.js');
 
 
 use Encore\Admin\Form;
