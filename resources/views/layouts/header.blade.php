@@ -1,3 +1,12 @@
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
 <div class="top-bar">
     <div class="container">
         <div class="row">
@@ -34,18 +43,18 @@
                             @foreach($pages as $page)
                                 <li {{ $page->relation ? "class=has-children" : "" }}>
                                     @if($page->redirect=='')
-                                        <a href='/{{ $page->url }}'>{!! $page->name  !!} </a>
+                                        <a href='/{{ $page->url }}' class="nav-link">{!! $page->name  !!} </a>
                                     @else
-                                        <a href='/{{ $page->redirect }}'>{!! $page->name  !!} </a>
+                                        <a href='/{{ $page->redirect }}' class="nav-link">{!! $page->name  !!} </a>
                                     @endif
                                     @if ($page->relation)
                                         <ul class="dropdown arrow-top">
                                             @foreach($page->sub_pages as $sub_page)
                                                 <li>
                                                     @if($sub_page->redirect=='')
-                                                        <a href='/{{ $sub_page->url }}'>{{ $sub_page->name }}</a>
+                                                        <a href='/{{ $sub_page->url }}' class="nav-link">{{ $sub_page->name }}</a>
                                                     @else
-                                                        <a href='/{{ $sub_page->redirect }}'>{{ $sub_page->name }}</a>
+                                                        <a href='/{{ $sub_page->redirect }}' class="nav-link">{{ $sub_page->name }}</a>
                                                     @endif
                                                 </li>
                                             @endforeach
