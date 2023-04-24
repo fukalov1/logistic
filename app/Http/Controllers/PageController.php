@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\AdminConfig;
+use App\Models\CompanyNew;
 use App\Models\QuestBlock;
 //use Illuminate\Support\Facades\Mail;
 use Mail;
@@ -21,13 +22,13 @@ class PageController extends Controller
 {
     public $bread_crubs;
 
-    public function __construct(Page $page, PageBlock $pageBlock, Map $map, QuestBlock $questBlock,
+    public function __construct(Page $page, PageBlock $pageBlock, Map $map, QuestBlock $questBlock, CompanyNew $companyNew,
                                 Slider $slider, SliderItem $sliderItem, Photoset $photoset, MailForm $mailForm)
     {
         $this->page = $page;
         $this->pageBlock = $pageBlock;
         $this->questBlock = $questBlock;
-//        $this->centerNew = $centerNew;
+        $this->companyNews = $companyNew;
         $this->slider = $slider;
         $this->sliderItem = $sliderItem;
         $this->photoset = $photoset;
@@ -54,14 +55,14 @@ class PageController extends Controller
         //  баннера для зоны новостей
         $banners = $this->sliderItem->where('slider_id',4)->get();
 //        dd($banners);
-        $limit_news = 4;
-        $limit_news = $limit_news - count($banners);
+        $limit_news = config('limit_news', 3);
 
         $this->getBeadCrumbs($page->id);
         $data['pages'] = $this->page->getMenu();
         $data['directs'] = $this->page->where('number_direct','>', '0')->orderBy('number_direct')->get();
         $data['page_blocks'] = $this->pageBlock->where('page_id', $page->id)->orderBy('orders')->get();
-//        $data['center_news'] = $this->centerNew->orderBy('date', 'desc')->inRandomOrder()->limit($limit_news)->get();
+        $data['company_news'] = $this->companyNews->orderBy('date', 'desc')->limit($limit_news)->get();
+
         $data['banners'] = $banners;
         $config = [];
         foreach (AdminConfig::all() as $item) {

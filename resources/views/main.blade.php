@@ -54,12 +54,35 @@
                 </div>
             </section>
         @elseif($page_block->type=='5')
-            <section class="page-block-link" id="block{{$page_block->id}}">
+            <div class="site-section" id="press-section">
                 <div class="container">
-                    <h1>{{ $page_block->header }}</h1>
-                    {!! $page_block->text !!}
+                    <div class="row">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <div class="block-heading-1" data-aos="fade-right" data-aos-delay="">
+                                <h2>Новости</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                @foreach($company_news as $item)
+                                <li class="mb-5" data-aos="fade-right" data-aos-delay="">
+                                    <span class="d-block text-muted mb-3">{{ $item->date }}</span>
+                                    <h2 class="h4">
+                                        <a href="press-single.html" class="text-black">
+                                            {{ $item->name }}
+                                        </a>
+                                    </h2>
+
+                                    <a href="/company-new/{{$item->id}}">
+                                    {!! $item->anons !!}
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
         @elseif($page_block->type=='6')
             <section class="page-block-pdf" id="block{{$page_block->id}}">
                 <div class="container">
