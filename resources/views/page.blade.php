@@ -292,12 +292,12 @@
 
             <div class="contact-maps" id="block{{$page_block->id}}">
                 <div class="map-item">
-                    <div id="map" style="width:100%; height:100%"></div>
+                    <div id="map" style="width:100%; height:600px"></div>
                 </div>
             </div>
 
 
-            <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU&amp;apikey={{ config('yandex_api_key') }}"
+            <script src="https://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU&amp;apikey={{ config('yandex_api_key') }}"
                     type="text/javascript">
             </script>
             <script type="text/javascript">
@@ -326,7 +326,7 @@
                         center: [53.55101407,49.28841250], // Тольятти
                         // controls: ['fullscreenControl','zoomControl'],
                         // behaviors: ['default', 'scrollZoom'],
-                        zoom: 15
+                        zoom: 5
                     });
 
                     destinations = {
@@ -351,9 +351,9 @@
                             // Текст метки
                             hintContent: '{{$point->name}}'
                         }, {
-                            iconImageHref: 'https://damian-pivovar.ru/images/loc-ico.png', // картинка иконки
-                            iconImageSize: [55, 41], // размеры картинки
-                            iconImageOffset: [-6, -10] // смещение картинки
+                            // iconImageHref: 'https://damian-pivovar.ru/images/loc-ico.png', // картинка иконки
+                            // iconImageSize: [55, 41], // размеры картинки
+                            // iconImageOffset: [-6, -10] // смещение картинки
                         }));
 
                     destinations['point{{$point->id}}'] = [{{$point->xcoord}},{{$point->ycoord}}];
@@ -361,7 +361,7 @@
                     @endforeach
                     @endforeach
 
-                    console.log(myPoints);
+                    console.log('points', myPoints);
 
                     // Добавление меток на карту
                     myPoints.forEach(function (item) {
