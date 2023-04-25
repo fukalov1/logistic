@@ -297,7 +297,9 @@
             </div>
 
 
-            <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+            <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU&amp;apikey={{ config('yandex_api_key') }}"
+                    type="text/javascript">
+            </script>
             <script type="text/javascript">
 
                 var myAreas = {};
