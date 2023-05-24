@@ -58,7 +58,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 mb-5 mb-lg-0">
-                            <div class="block-heading-1" data-aos="fade-right" data-aos-delay="">
+                            <div class="block-heading-1" data-aos="fade-right" data-aos-delay="1">
                                 <h2>Новости</h2>
                             </div>
                         </div>
@@ -142,10 +142,12 @@
                             <div class="col-12 col-lg-6 block__{{ $item->id }}
                             {{ (($item->order % 2) == 0) ? 'order-lg-2' : ''}}"
                                  style="background-image: url('/uploads/{{ $item->image }}');"
-                                 data-aos="fade-{{ (($item->order % 2) == 0) ? 'left' : 'right' }}" data-aos-delay="">
+{{--                                 data-aos="fade-{{ (($item->order % 2) == 0) ? 'left' : 'right' }}" data-aos-delay=""--}}
+                            >
                             </div>
                             <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0 {{ (($item->order % 2) == 0) ? 'order-lg-1' : ''}}"
-                                 data-aos="fade-{{ (($item->order % 2) == 0) ? 'left' : 'right' }}" data-aos-delay="">
+{{--                                 data-aos="fade-{{ (($item->order % 2) == 0) ? 'left' : 'right' }}" data-aos-delay=""--}}
+                            >
                                 <h2 class="mb-3 text-black">{!! $item->name !!}</h2>
                                 <p>{{ $item->description }}</p>
                             </div>
