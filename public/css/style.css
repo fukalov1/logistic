@@ -1155,11 +1155,7 @@ h1, h2, h3, h4, h5,
 
 .owl-carousel .owl-stage {
     display: flex;
-}
-
-.owl-item img {
-    width: auto;
-    height: 50%;
+    height: 70vh !important;
 }
 
 .btn-md {
