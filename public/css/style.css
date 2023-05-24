@@ -461,6 +461,12 @@ h1, h2, h3, h4, h5,
   position: relative;
   width: 100%;
   padding: 1rem; }
+  .site-navbar .main-menu li a.nav-link {
+      font-size: 1.3em;
+  }
+  .site-navbar .main-menu li.has-children .dropdown a.nav-link {
+      font-size: 1em;
+  }
   @media (max-width: 991.98px) {
     .site-navbar {
       padding-top: 3rem;
