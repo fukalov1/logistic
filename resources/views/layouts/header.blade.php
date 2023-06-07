@@ -7,22 +7,22 @@
     <div class="site-mobile-menu-body"></div>
 </div>
 
-<div class="top-bar">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">{{ config('email') }}</span></a>
-                <span class="mx-md-2 d-inline-block"></span>
-                <div class="float-right">
-                    <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">{{ config('phone') }}</span></a>
-                </div>
+{{--<div class="top-bar">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-12">--}}
+{{--                <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">{{ config('email') }}</span></a>--}}
+{{--                <span class="mx-md-2 d-inline-block"></span>--}}
+{{--                <div class="float-right">--}}
+{{--                    <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">{{ config('phone') }}</span></a>--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-    </div>
-</div>
+{{--    </div>--}}
+{{--</div>--}}
 
 <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
@@ -36,7 +36,7 @@
                 <!--              </div>-->
             </div>
 
-            <div class="col-12">
+            <div class="col-10">
                 <nav class="site-navigation text-right ml-auto " role="navigation">
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                         @if(isset($pages))
@@ -66,6 +66,13 @@
                     </ul>
                 </nav>
 
+            </div>
+            <div class="col-2">
+                <div class="float-right">
+                   <a href="#"><span class="mr-2 text-white icon-phone"></span>
+                       <span class="d-none d-md-inline-block">{{ config('phone') }}</span>
+                   </a>
+                </div>
             </div>
 
             <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
