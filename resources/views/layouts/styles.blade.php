@@ -1,14 +1,3 @@
-<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
-
-{{--<link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">--}}
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
-<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-<link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-<link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
-<link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{asset('/style/style.css')}}">
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

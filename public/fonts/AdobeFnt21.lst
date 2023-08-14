@@ -1,0 +1,179 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PragmaticaC
+FamilyName:PragmaticaC
+StyleName:Regular
+MenuName:PragmaticaC
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PragmaticaC
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/PragmaticaC.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:18932
+FileModTime:271442282
+NameArray:0,Mac,4,PragmaticaC
+NameArray:0,Win,1,PragmaticaC
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PragmaticaC-Bold
+FamilyName:PragmaticaC
+StyleName:Bold
+MenuName:PragmaticaC
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:PragmaticaC Bold
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/PragmaticaC-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:19540
+FileModTime:271442182
+NameArray:0,Mac,4,PragmaticaC Bold
+NameArray:0,Win,1,PragmaticaC
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PragmaticaC-BoldItalic
+FamilyName:PragmaticaC
+StyleName:Bold Italic
+MenuName:PragmaticaC
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:PragmaticaC Bold Italic
+FamilyNameNative:
+StyleNameNative:Bold Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/PragmaticaC-BoldItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:20192
+FileModTime:271442182
+NameArray:0,Mac,4,PragmaticaC Bold Italic
+NameArray:0,Win,1,PragmaticaC
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PragmaticaLightC-Bold
+FamilyName:PragmaticaLightC
+StyleName:Bold
+MenuName:PragmaticaLightC
+StyleBits:2
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:PragmaticaLightC Bold
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/PragmaticaLightC-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:19588
+FileModTime:271442282
+NameArray:0,Mac,4,PragmaticaLightC Bold
+NameArray:0,Win,1,PragmaticaLightC
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/AdobeFnt21.lst
+FileLength:3785
+FileModTime:709537021
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PragmaticaLightC
+FamilyName:PragmaticaLightC
+StyleName:Regular
+MenuName:PragmaticaLightC
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:PragmaticaLightC
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/PragmaticaLightC.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:19616
+FileModTime:271442274
+NameArray:0,Mac,4,PragmaticaLightC
+NameArray:0,Win,1,PragmaticaLightC
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PragmaticaC-Italic
+FamilyName:PragmaticaC
+StyleName:Italic
+MenuName:PragmaticaC
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:PragmaticaC Italic
+FamilyNameNative:
+StyleNameNative:Italic
+FullNameNative:
+WritingScript:Cyrillic
+OutlineFileName:/Volumes/Works/Works 2023/FS_PLK/F:Style_PLK Folder/Document fonts/PragmaticaC-Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:no
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:19652
+FileModTime:271442282
+NameArray:0,Mac,4,PragmaticaC Italic
+NameArray:0,Win,1,PragmaticaC
+%EndFont
+

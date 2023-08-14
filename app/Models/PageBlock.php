@@ -27,7 +27,7 @@ class PageBlock extends Model
         return $this->hasMany(Photoset::class);
     }
 
-    public function  sliders()
+    public function sliders()
     {
         return $this->hasMany(Slider::class);
     }
