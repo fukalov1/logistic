@@ -587,7 +587,16 @@ img {
 .insurance .wrapper {
   padding: 0px 70px;
 }
+.info-block .wrapper {
+  padding: 0px 70px;
+}
 .insurance .wrapper .insurance-position {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.info-block .wrapper .info-block-position {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
@@ -596,7 +605,15 @@ img {
 .insurance .wrapper .insurance-position .block-left {
   width: 50%;
 }
+.info-block .wrapper .info-block-position .block-left {
+  width: 50%;
+}
 .insurance .wrapper .insurance-position .block-left .image-fix-scale {
+  transform: skewX(0deg);
+  -webkit-clip-path: polygon(0% 0, 100% 0, 81% 100%, 0 100%);
+          clip-path: polygon(0% 0, 100% 0, 81% 100%, 0 100%);
+}
+.info-block .wrapper .info-block-position .block-left .image-fix-scale {
   transform: skewX(0deg);
   -webkit-clip-path: polygon(0% 0, 100% 0, 81% 100%, 0 100%);
           clip-path: polygon(0% 0, 100% 0, 81% 100%, 0 100%);
@@ -608,6 +625,14 @@ img {
   transform: matrix(1, 0, -0.3, 1, 0, 0);
   margin-left: -60px;
 }
+.info-block .wrapper .info-block-position .block-right {
+  width: 50%;
+  background-color: rgba(0, 51, 95, 0);
+  padding: 0px 0px 0px 115px;
+  /*transform: matrix(1, 0, -0.3, 1, 0, 0);*/
+  margin-left: -60px;
+    text-align: right;
+}
 .insurance .wrapper .insurance-position .block-right p {
   font-family: "Pragmatica";
   color: rgb(224, 224, 224);
@@ -615,6 +640,40 @@ img {
   font-size: 24px;
   text-align: end;
   transform: matrix(1, 0, 0.3, 1, 0, 0);
+}
+
+.info-block .wrapper .info-block-position .block-right p strong {
+  font-family: "Pragmatica";
+  color: #013261;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: end;
+  transform: matrix(1, 0, 0.3, 1, 0, 0);
+}
+
+.info-block .wrapper .info-block-position .block-right p {
+  font-family: "Pragmatica";
+  color: #85889e;
+  font-size: 16px;
+  text-align: end;
+}
+
+.info-block .wrapper .info-block-position .block-right p a {
+  font-family: "Pragmatica";
+  color: #85889e;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: end;
+  text-decoration: none;
+}
+
+.info-block .wrapper .info-block-position .block-right p a:hover {
+  font-family: "Pragmatica";
+  color: #85889e;
+  font-size: 16px;
+    font-weight: 700;
+  text-align: end;
+  text-decoration: underline;
 }
 
 .block-animation {
