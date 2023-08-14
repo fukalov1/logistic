@@ -140,7 +140,7 @@
                             </svg>
                             <div class="white-table table-animation">
                                 <p>
-                                    {{ config('transported') }}+
+                                    <span data-number="{{ config('transported') }}">{{ config('transported') }}</span>+
                                 </p>
                             </div>
                             <p class="card-number-text">

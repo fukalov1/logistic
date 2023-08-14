@@ -38,7 +38,6 @@ class PageController extends Controller
 
     public function show(Page $page)
     {
-
 //        dd($page);
         $template = 'page';
         $data = ['data' => $page];
@@ -54,7 +53,6 @@ class PageController extends Controller
 //
         //  баннера для зоны новостей
         $banners = $this->sliderItem->where('slider_id',4)->get();
-//        dd($banners);
         $limit_news = config('limit_news', 3);
 
         $this->getBeadCrumbs($page->id);

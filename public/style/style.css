@@ -113,6 +113,10 @@ img {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.884);
 }
+.header .wrapper .header-block-1 .nav .nav-line-1 .green-table p a {
+    color: #fff;
+    text-decoration: none;
+}
 .header .wrapper .header-block-1 .nav .nav-line-2 {
   display: flex;
   gap: 20px;
@@ -1054,6 +1058,10 @@ img {
   color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 14px;
+}
+.footer .wrapper .footer-wrapper .footer-center-block .footer-center-block-line-1 .green-table-footer p a {
+    text-decoration: none;
+    color: #ffffff;
 }
 .footer .wrapper .footer-wrapper .footer-center-block .footer-center-block-line-2 {
   display: flex;

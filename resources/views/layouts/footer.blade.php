@@ -5,7 +5,7 @@
             <div class="footer-center-block">
                 <div class="footer-center-block-line-1">
                     <div class="green-table-footer">
-                        <p>Наверх</p>
+                        <p><a href="#top">Наверх</a></p>
                     </div>
                 </div>
 

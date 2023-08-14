@@ -243,6 +243,28 @@
                 </div>
             </div>
 
+        @elseif($page_block->type=='3')
+            <div class="bookmark bookmark-2">
+                <p>
+                    {{ $page_block->header }}
+                </p>
+            </div>
+
+            <div class="info-block block-wrapper">
+                <div class="wrapper">
+                    <div class="info-block-position">
+                        <div class="block-left">
+                            <p>
+                                {!! $page_block->text !!}
+                            </p>
+                        </div>
+                        <div class="block-right">
+                            <img class="image-fix-scale" src="{{asset('/uploads/'.$page_block->image)}}" alt="{{ $page_block->header }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             @if( $page_block->id == 4)
                 <div class="block-animation">
 

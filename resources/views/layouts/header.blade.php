@@ -1,11 +1,12 @@
 <header class="header">
     <div class="wrapper">
         <div class="header-block-1">
+            <a link="top"></a>
             <img src="{{asset('/img/logo-header.PNG')}}" alt="{{ config('company_name') }}">
             <div class="nav">
                 <div class="nav-line-1">
                     <div class="green-table">
-                        <p>Главная страница</p>
+                        <p><a href='/'>Главная страница</a></p>
                     </div>
                 </div>
                 <div class="nav-line-2">
