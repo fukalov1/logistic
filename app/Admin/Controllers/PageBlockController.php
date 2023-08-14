@@ -98,10 +98,10 @@ class PageBlockController extends Controller
         $grid = new Grid(new PageBlock);
         $grid->model()->where('page_id',session('page_id'))->orderBy('orders');
 
-//        $grid->id('Id');
+        $grid->id('Id');
 //        $grid->page_id('Page id');
         $grid->orders('Номер показа')->editable();
-//        $grid->header('Заголовок');
+        $grid->column('header', 'Заголовок');
 //        $grid->submenu('Пункт подменю')->display(function () {
 //            $str = 'нет';
 //            if ($this->submenu)
