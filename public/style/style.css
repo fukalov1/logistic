@@ -205,7 +205,7 @@ img {
   position: sticky;
 }
 .banner .wrapper .banner-image {
-  background: url(../img/18.png) left 35%/auto 150% no-repeat;
+  background: url(/img/18.png) left 35%/auto 150% no-repeat;
   background-repeat: no-repeat no-repeat;
   height: 430px;
 }
@@ -620,7 +620,7 @@ img {
 .block-animation {
   position: -webkit-sticky;
   position: sticky;
-  background-image: url(../img/8.jpg);
+  background-image: url('/img/8.jpg');
   height: 1200px;
   background-size: 100%;
   background-repeat: no-repeat no-repeat;
