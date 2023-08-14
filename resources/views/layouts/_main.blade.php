@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
     @include('layouts.styles')
 </head>
-<body>
+<body style="min-width: 1280px;">
 <div class="wrapper">
     <div class="background-gradient">
         @include('layouts.header')
