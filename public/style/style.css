@@ -879,6 +879,8 @@ img {
 }
 .white-background .blocks-news .wrapper .news .slide .link-left .block-left .title-and-sub-title .title .title-text {
   background-color: #22aae1;
+  max-width: 71%;
+    min-width: 60%;
 }
 .white-background .blocks-news .wrapper .news .slide .link-left .block-left .title-and-sub-title .title .title-text p {
   padding: 8px 8px;
@@ -945,6 +947,8 @@ img {
   background-color: #a2c536;
   width: -webkit-fill-available;
   display: flex;
+    max-width: 71%;
+    min-height: 60%;
 }
 .white-background .blocks-news .wrapper .news .slide .link-right .block-right .title-and-text .title-and-years .title p {
   padding: 8px 20px;
