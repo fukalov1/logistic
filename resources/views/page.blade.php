@@ -319,7 +319,9 @@
                                         @if ( $left == 1)
                                             <a class="link-left" href="">
                                                 <div class="block-left">
-                                                    <img src="{{asset('/img/img-1.PNG')}}" alt="">
+                                                    @if($item->image)
+                                                    <img src="{{ asset('/uploads/'.$item->image) }}" alt="">
+                                                    @endif
                                                     <div class="title-and-sub-title">
                                                         <div class="title">
                                                             <div class="title-text">
@@ -363,7 +365,9 @@
                                                             {{ $item->anons }}
                                                         </p>
                                                     </div>
-                                                    <img src="./img/img-3.PNG" alt="">
+                                                    @if($item->image)
+                                                        <img src="{{ asset('/uploads/'.$item->image) }}" alt="">
+                                                        @endif
                                                 </div>
                                             </a>
                                     </div>
