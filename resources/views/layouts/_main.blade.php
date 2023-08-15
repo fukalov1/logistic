@@ -30,7 +30,7 @@
                             <div class="line-1">
                                 <div class="card-hover">
                                     <img class="gallary-image-item" src="{{asset('/uploads/'.$directs[0]->image )}}" alt="">
-                                    <a class="link-partner" class href="">{{ $directs[0]->name }} </a>
+                                    <a class="link-partner" class href="/uslugi#delivery">{{ $directs[0]->name }} </a>
                                 </div>
 
                             </div>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="card-hover">
                                     <img class="gallary-image-item fixed-card" src="{{asset('/uploads/'.$directs[2]->image )}}" alt="">
-                                    <a class="link-partner link-partner-fixed" class href="">{{ $directs[2]->name }} </a>
+                                    <a class="link-partner link-partner-fixed" class href="/uslugi#containers">{{ $directs[2]->name }} </a>
                                 </div>
 
 
@@ -49,16 +49,16 @@
                             <div class="line-3">
                                 <div class="card-hover">
                                     <img class="gallary-image-item" src="{{asset('/uploads/'.$directs[3]->image )}}" alt="">
-                                    <a class="link-partner" class href="">{{ $directs[3]->name }} </a>
+                                    <a class="link-partner" class href="/uslugi#oil">{{ $directs[3]->name }} </a>
                                 </div>
 
                                 <div class="card-hover">
                                     <img class="gallary-image-item  fixed-card" src="{{asset('/uploads/'.$directs[4]->image )}}" alt="">
-                                    <a class="link-partner link-partner-fixed" class href="">{{ $directs[4]->name }} </a>
+                                    <a class="link-partner link-partner-fixed" class href="/uslugi#negabarit">{{ $directs[4]->name }} </a>
                                 </div>
                                 <div class="card-hover ">
                                     <img class="gallary-image-item  fixed-card fix-padding-bottom" src="{{asset('/uploads/'.$directs[5]->image )}}" alt="">
-                                    <a class="link-partner link-partner-fixed" class href="">{{ $directs[5]->name }} </a>
+                                    <a class="link-partner link-partner-fixed" class href="/uslugi#corn">{{ $directs[5]->name }} </a>
                                 </div>
 
 
