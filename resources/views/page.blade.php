@@ -331,7 +331,7 @@
                                                             </div>
                                                             <div class="title-years">
                                                                 <p>
-                                                                    {{ $item->date }}
+                                                                    {{ $item->date1 }}
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -352,7 +352,7 @@
                                                         <div class="title-and-years">
                                                             <div class="years">
                                                                 <p>
-                                                                    {{ $item->date }}
+                                                                    {{ $item->date1 }}
                                                                 </p>
                                                             </div>
                                                             <div class="title">
