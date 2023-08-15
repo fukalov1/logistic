@@ -5,7 +5,7 @@
             <img src="{{asset('/img/logo-header.PNG')}}" alt="{{ config('company_name') }}">
             <div class="nav">
                 <div class="nav-line-1">
-                    <div class="white-table">
+                    <div class="{{ $data->id == 1 ? 'green-table' : 'white-table' }}">
                         <p><a href='/'>Главная страница</a></p>
                     </div>
                 </div>
