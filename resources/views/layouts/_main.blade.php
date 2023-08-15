@@ -60,9 +60,6 @@
                                     <img class="gallary-image-item  fixed-card fix-padding-bottom" src="{{asset('/uploads/'.$directs[5]->image )}}" alt="">
                                     <a class="link-partner link-partner-fixed" class href="/uslugi#corn">{{ $directs[5]->name }} </a>
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
