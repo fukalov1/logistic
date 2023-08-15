@@ -32,7 +32,11 @@
             <p class="number">{{ config('phone') }}</p>
         </div>
         <div class="green-banner">
-            <p>Ссылка на презентацию компании</p>
+            <p>
+                <a href="/Presentation_PLK.pdf" title="презентация Первой логистической компании ">
+               Ссылка на презентацию компании
+                </a>
+            </p>
             <div class="erorr"></div>
         </div>
     </div>
