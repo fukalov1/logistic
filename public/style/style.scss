@@ -117,6 +117,21 @@ img{
                         color: rgba(255, 255, 255, 0.884);
                     }
                 }
+                .white-table{
+                    background-color:#ffffff;
+                    max-width: 120px;
+                    padding: 10px 0px;
+                    transform: matrix(1, 0, -0.3, 1, 0, 0);
+                    display: flex;
+                    justify-content: center;
+                    margin-left: 15px;
+                    p{
+                        transform: matrix(1, 0, 0.3, 1, 0, 0);
+                        font-family: 'Pragmatica';
+                        font-weight: 500;
+                        font-size: 12px;
+                    }
+                }
             }
             .nav-line-2{
                 display: flex;
@@ -134,6 +149,22 @@ img{
                         font-family: 'Pragmatica';
                         font-weight: 500;
                         font-size: 12px;
+                    }
+                }
+                .green-table{
+                    background-color: #a2c536;
+                    padding: 10px 0px;
+                    transform: matrix(1, 0, -0.3, 1, 0, 0);
+                    width: 120px;
+
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        transform: matrix(1, 0, 0.3, 1, 0, 0);
+                        font-family: 'Pragmatica';
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(255, 255, 255, 0.884);
                     }
                 }
             }
