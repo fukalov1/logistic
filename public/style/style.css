@@ -861,7 +861,7 @@ img {
 .white-background .blocks-news .wrapper .news .slide .link-left .block-left {
   display: flex;
   align-items: flex-start;
-  width: 85%;
+  width: 66%;
 }
 .white-background .blocks-news .wrapper .news .slide .link-left .block-left img {
   max-height: 240px;
