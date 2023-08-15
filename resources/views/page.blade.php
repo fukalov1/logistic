@@ -117,9 +117,11 @@
                     </div>
                 </div>
             @else
-                <div class="bookmark bookmark-1">
+                @if($page_block->header)
+                    <div class="bookmark bookmark-1">
                     <p>{{ $page_block->header }}</p>
                 </div>
+                    @endif
                 <div class="about-us block-wrapper">
                     <div class="wrapper">
                         <p class="about-us-white-text">
@@ -222,11 +224,13 @@
             @endif
 
         @elseif($page_block->type=='2')
+            @if($page_block->header)
             <div class="bookmark bookmark-4">
                 <p>
                     {{ $page_block->header }}
                 </p>
             </div>
+            @endif
 
             <div class="info-block block-wrapper">
                 <div class="wrapper">
@@ -244,12 +248,13 @@
             </div>
 
         @elseif($page_block->type=='3')
+            @if($page_block->header)
             <div class="bookmark bookmark-2">
                 <p>
                     {{ $page_block->header }}
                 </p>
             </div>
-
+            @endif
             <div class="info-block block-wrapper">
                 <div class="wrapper">
                     <div class="info-block-position">

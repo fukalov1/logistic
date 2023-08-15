@@ -27,28 +27,26 @@ function onEntr(entry) {
   }
 
 
+// const anchors = document.querySelectorAll('a[href*="#"]')
+//
+// for (let anchor of anchors) {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault()
+//
+//         const blockID = anchor.getAttribute('href').substr(1)
+//
+//         document.getElementById(blockID).scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//         })
+//     })
+// }
 
-var counter = function() {
-
-    $('#about-section').waypoint( function( direction ) {
-
-        if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-            var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-            $('.number > span').each(function(){
-                var $this = $(this),
-                    num = $this.data('number');
-                $this.animateNumber(
-                    {
-                        number: num,
-                        numberStep: comma_separator_number_step
-                    }, 7000
-                );
-            });
-
-        }
-
-    } , { offset: '95%' } );
-
-}
-counter();
+$(document).ready(function() {
+    $(window).on('load', function(){
+        var top = $(window.location.hash+'+*').offset().top;
+        $('html,body').stop().animate({
+            scrollTop: top
+        }, 1500);
+    });
+});

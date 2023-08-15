@@ -622,6 +622,11 @@ img {
   -webkit-clip-path: polygon(0% 0, 100% 0, 81% 100%, 0 100%);
           clip-path: polygon(0% 0, 100% 0, 81% 100%, 0 100%);
 }
+.info-block .wrapper .info-block-position .block-right .image-fix-scale {
+    transform: skewX(0deg);
+    -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
 .insurance .wrapper .insurance-position .block-right {
   width: 50%;
   background-color: rgba(0, 51, 95, 0);

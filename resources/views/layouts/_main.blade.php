@@ -37,7 +37,7 @@
                             <div class="line-2">
                                 <div class="card-hover line-2-fixed-card">
                                     <img class="gallary-image-item" src="{{asset('/uploads/'.$directs[1]->image )}}" alt="">
-                                    <a class="link-partner" class href="">{{ $directs[1]->name }} </a>
+                                    <a class="link-partner" class href="/uslugi#logistic">{{ $directs[1]->name }} </a>
                                 </div>
                                 <div class="card-hover">
                                     <img class="gallary-image-item fixed-card" src="{{asset('/uploads/'.$directs[2]->image )}}" alt="">

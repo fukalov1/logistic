@@ -1,7 +1,7 @@
 <header class="header">
     <div class="wrapper">
         <div class="header-block-1">
-            <a link="top"></a>
+            <div id="top"></div>
             <img src="{{asset('/img/logo-header.PNG')}}" alt="{{ config('company_name') }}">
             <div class="nav">
                 <div class="nav-line-1">
