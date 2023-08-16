@@ -34,7 +34,7 @@
 
     <div class="airplane">
         <p>
-            <a href="/Presentation_PLK.pdf" title="презентация Первой логистической компании ">
+            <a href="/Presentation_PLK.pdf" title="презентация Первой логистической компании " target="_blank">
                 Ссылка на презентацию компании
             </a>
         </p>
