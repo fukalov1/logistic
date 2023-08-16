@@ -715,6 +715,12 @@ img {
   text-align: end;
   transform: matrix(1, 0, 0.3, 1, 0, 0);
 }
+.info-block .wrapper .info-block-position .block-right h2 {
+    font-family: "Pragmatica";
+    color: rgb(0, 51, 95);
+    font-size: 20px;
+    text-align: end;
+}
 
 .info-block .wrapper .info-block-position .block-right p {
   font-family: "Pragmatica";
@@ -733,6 +739,38 @@ img {
 }
 
 .info-block .wrapper .info-block-position .block-right p a:hover {
+  font-family: "Pragmatica";
+  color: #85889e;
+  font-size: 16px;
+    font-weight: 700;
+  text-align: end;
+  text-decoration: underline;
+}
+
+.info-block .wrapper .info-block-position .block-left h2 {
+  font-family: "Pragmatica";
+  color: rgb(0, 51, 95);
+  font-size: 20px;
+  text-align: end;
+}
+
+.info-block .wrapper .info-block-position .block-left p {
+  font-family: "Pragmatica";
+  color: #85889e;
+  font-size: 16px;
+  text-align: end;
+}
+
+.info-block .wrapper .info-block-position .block-left p a {
+  font-family: "Pragmatica";
+  color: #85889e;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: end;
+  text-decoration: none;
+}
+
+.info-block .wrapper .info-block-position .block-left p a:hover {
   font-family: "Pragmatica";
   color: #85889e;
   font-size: 16px;
