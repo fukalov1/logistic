@@ -713,7 +713,7 @@ img {
 .info-block .wrapper .info-block-position .block-right p strong
 {
   font-family: "Pragmatica";
-  color: #013261;
+  color: #143046;
   font-weight: 600;
   font-size: 16px;
   text-align: end;
@@ -721,7 +721,7 @@ img {
 }
 .info-block .wrapper .info-block-position .block-right h2 {
     font-family: "Pragmatica";
-    color: rgb(0, 51, 95);
+    color: #143046;
     font-size: 20px;
     text-align: end;
 }
@@ -733,6 +733,7 @@ img {
   color: #78828c;
   font-size: 16px;
   text-align: end;
+  padding: 3px 0 3px 0;
 }
 
 .info-block .wrapper .info-block-position .block-right div a
