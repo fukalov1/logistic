@@ -428,7 +428,7 @@ img {
           clip-path: polygon(22% 0, 100% 0, 78% 100%, 0 100%);
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .fixed-card {
-  margin: -11px 20px 30px 10px;
+  margin: 0px 20px 30px 10px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .fix-padding-bottom {
   margin: 0px 20px 30px 10px;
