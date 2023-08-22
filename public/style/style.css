@@ -267,7 +267,7 @@ img {
 .banner .wrapper .banner-image {
   background: url(/img/18.png) left 35%/auto 150% no-repeat;
   background-repeat: no-repeat no-repeat;
-  height: 430px;
+  height: 412px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image {
   transform: matrix(1, 0, -0.3, 1, 0, 0);
@@ -428,10 +428,10 @@ img {
           clip-path: polygon(22% 0, 100% 0, 78% 100%, 0 100%);
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .fixed-card {
-  margin: 0px 20px 30px 10px;
+  margin: -11px 20px 30px 10px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .fix-padding-bottom {
-  margin: 0px 20px 30px 10px;
+  margin: -11px 20px 30px 10px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .card-hover:hover .gallary-image-item {
   opacity: 0;
