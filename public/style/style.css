@@ -755,7 +755,9 @@ img {
   text-decoration: none;
 }
 
-.info-block .wrapper .info-block-position .block-right p a:hover {
+.info-block .wrapper .info-block-position .block-right p a:hover,
+.info-block .wrapper .info-block-position .block-right >  a:hover
+{
   font-family: "Pragmatica";
   color: #85889e;
   font-size: 16px;
