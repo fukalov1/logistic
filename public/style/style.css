@@ -698,7 +698,8 @@ img {
   margin-left: -60px;
     text-align: right;
 }
-.insurance .wrapper .insurance-position .block-right p {
+.insurance .wrapper .insurance-position .block-right p
+{
   font-family: "Pragmatica";
   color: rgb(224, 224, 224);
   font-weight: 400;
@@ -707,7 +708,10 @@ img {
   transform: matrix(1, 0, 0.3, 1, 0, 0);
 }
 
-.info-block .wrapper .info-block-position .block-right p strong {
+.info-block .wrapper .info-block-position .block-right div strong,
+.info-block .wrapper .info-block-position .block-right > strong,
+.info-block .wrapper .info-block-position .block-right p strong
+{
   font-family: "Pragmatica";
   color: #013261;
   font-weight: 600;
@@ -722,7 +726,9 @@ img {
     text-align: end;
 }
 
-.info-block .wrapper .info-block-position .block-right p {
+.info-block .wrapper .info-block-position .block-right p,
+.info-block .wrapper .info-block-position .block-right div
+{
   font-family: "Pragmatica";
   color: #85889e;
   font-size: 16px;
