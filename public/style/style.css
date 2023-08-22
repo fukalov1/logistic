@@ -730,14 +730,24 @@ img {
 .info-block .wrapper .info-block-position .block-right div
 {
   font-family: "Pragmatica";
-  color: #85889e;
+  color: #78828c;
   font-size: 16px;
   text-align: end;
 }
 
+.info-block .wrapper .info-block-position .block-right div a
+{
+  font-family: "Pragmatica";
+  color: #78828c;
+  font-size: 16px;
+    text-decoration: none;
+  text-align: end;
+}
+
+.info-block .wrapper .info-block-position .block-right div a,
 .info-block .wrapper .info-block-position .block-right p a {
   font-family: "Pragmatica";
-  color: #85889e;
+  color: #78828c;
   font-size: 16px;
   font-weight: 700;
   text-align: end;
