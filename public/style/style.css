@@ -431,7 +431,7 @@ img {
   margin: -11px 20px 30px 10px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .fix-padding-bottom {
-  margin: -11px 20px 30px 10px;
+  margin: 0px 20px 30px 10px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .card-hover:hover .gallary-image-item {
   opacity: 0;
