@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="footer-right">
-                @if(config('phone'))
+                @if(config('phone') != '-')
                 <p class="ahtung">Звонок бесплатный для всех регионов РФ</p>
                 <p class="number">{{ config('phone') }}</p>
                 @endif
