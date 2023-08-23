@@ -265,9 +265,9 @@ img {
   position: sticky;
 }
 .banner .wrapper .banner-image {
-  background: url(/img/18.png) left 35%/auto 153% no-repeat;
+  background: url(/img/18.png) left 35%/auto 154% no-repeat;
   background-repeat: no-repeat no-repeat;
-  height: 419px;
+  height: 410px;
 }
 .banner .wrapper .banner-image .gallary-image-position .gallary-image {
   transform: matrix(1, 0, -0.3, 1, 0, 0);
