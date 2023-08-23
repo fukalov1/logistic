@@ -417,6 +417,9 @@ img {
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .card-hover .link-partner-fixed {
   margin-top: 0px;
 }
+.banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .card-hover .link-partner-fixed3 {
+  margin-top: -10px;
+}
 .banner .wrapper .banner-image .gallary-image-position .gallary-image .line-3 .gallary-image-item {
   width: 162px;
   height: 120px;
