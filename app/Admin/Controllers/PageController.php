@@ -115,20 +115,20 @@ class PageController extends Controller
             $count = count($page_blocks);
             return "<a href='/admin/page_blocks?set={$this->id}' title='перейти к текстовым блокам'><span class='label label-warning'>{$count}</span></a>";
         });
-        $grid->content('Показ в блоке направлений')->display(function ($number) {
-            $str = '';
-            if ($this->number_direct>0) {
-                $str = "да";
-            }
-            return $str;
-        });
-        $grid->news_branch('Новости')->display(function ($number) {
-            $str = '';
-            if ($this->news_branch>0) {
-                $str = "<a href='/admin/news?set=".$this->id."'>управлять</a>";
-            }
-            return $str;
-        });
+//        $grid->content('Показ в блоке направлений')->display(function ($number) {
+//            $str = '';
+//            if ($this->number_direct>0) {
+//                $str = "да";
+//            }
+//            return $str;
+//        });
+//        $grid->news_branch('Новости')->display(function ($number) {
+//            $str = '';
+//            if ($this->news_branch>0) {
+//                $str = "<a href='/admin/news?set=".$this->id."'>управлять</a>";
+//            }
+//            return $str;
+//        });
 //        $grid->updated_at('Обновллено');
 
         return $grid;
