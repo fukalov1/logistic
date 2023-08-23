@@ -23,7 +23,7 @@
 
         <div class="banner">
             <div class="wrapper">
-                <div class="banner-image" style="background: url({{ asset('/uploads/'.$data->image) }}) left 35%/auto 150% no-repeat">
+                <div class="banner-image" style="background: url({{ asset('/uploads/'.$data->image) }}) left 35%/auto 154% no-repeat">
                     <div class="gallary-image-position">
                         <div class="gallary-image">
                             <div class="line-1">
