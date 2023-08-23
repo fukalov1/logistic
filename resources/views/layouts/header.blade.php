@@ -28,8 +28,10 @@
         </div>
         <div class="header-decoration-line"></div>
         <div class="header-block-2">
+            @if(config('phone'))
             <p class="text-of-number">Звонок бесплатный для всех регионов РФ</p>
             <p class="number">{{ config('phone') }}</p>
+            @endif
         </div>
         <div class="green-banner">
             <p>
