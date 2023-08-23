@@ -38,7 +38,6 @@ class PageController extends Controller
 
     public function show(Page $page)
     {
-//        dd($page);
         $template = 'page';
         $data = ['data' => $page];
         // Если главная страница

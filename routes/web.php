@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $page = \App\Models\Page::find(1);
+    return redirect('/glavnaya');
 });
 
 Route::post('/send_form/{id}', [PageController::class, 'sendFormData']);
