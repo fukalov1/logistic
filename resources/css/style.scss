@@ -41,27 +41,27 @@ img{
 @font-face {
     font-family: "Pragmatica";
     src: url("../fonts/PragmaticaC-Bold.otf") format("truetype");
-    font-style: bold;
+    font-style: normal;
     font-weight:900;
 }
 
 @font-face {
     font-family: "RalewayRegular";
-    src: url("../fonts/RalewayRegular.ttf") format("truetype");
+    //src: url("../fonts/RalewayRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "RalewayRegular";
-    src: url("../fonts/RalewayRegular.ttf") format("truetype");
+    //src: url("../fonts/RalewayRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "RalewayRegular";
-    src: url("../fonts/RalewayRegular.ttf") format("truetype");
+    //src: url("../fonts/RalewayRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -241,7 +241,7 @@ img{
     position: sticky;
     .wrapper{
         .banner-image{
-            background: url(../img/18.png) left 35%/auto 154% no-repeat;
+            //background: url(../img/18.png) left 35%/auto 154% no-repeat;
             background-repeat: no-repeat no-repeat;
             height: 410px;
 
@@ -525,7 +525,7 @@ img{
                 align-items: center;
                 gap: 10px;
                 max-width: 292.5px;
-                width: -webkit-fill-available;
+                //width: -webkit-fill-available;
                 .white-table{
                      background-color: rgb(0 51 95);
                     transform: matrix(1, 0, -0.3, 1, 0, 0);

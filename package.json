@@ -17,7 +17,8 @@
     },
     "dependencies": {
         "node-static": "^0.7.11",
-        "path": "^0.12.7"
+        "path": "^0.12.7",
+        "sass-loader": "^13.3.2"
     },
     "optionalDependencies": {
         "fsevents": "*"

@@ -191,8 +191,8 @@ class PageController extends Controller
             $form->text('redirect', 'Перенаправление');
         });
 
-        $form->saving(function (Form $form) {
-            if ($form->name == 'главная')
+        $form->saved(function (Form $form) {
+            if ($form->name == 'главная' or $form->id == 1)
                 $form->url = '';
             else
                 $form->url = $this->translit($form->name);
